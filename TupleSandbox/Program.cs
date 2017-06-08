@@ -2,11 +2,16 @@
 
 namespace TupleSandbox
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Tuple Test Stuff.
+            var dateTemp = new MdlDateTime(DateTime.Now);
+
+            (int Hour, int Minutes, int Seconds) = dateTemp;
+
+            Console.WriteLine($"Current time: {Hour}:{Minutes}:{Seconds}");
         }
     }
 }
